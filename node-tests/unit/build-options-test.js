@@ -42,6 +42,7 @@ const defaultsFixture = Object.freeze({
   hbs: {
     idGen: defaultGens.hbsIdGen,
     copypastaGen: defaultGens.hbsCopypastaGen,
+    bundle: false,
     prefix: 'svg/'
   },
 
