@@ -27,13 +27,13 @@ export async function loadSvg(resolver, name) {
     return invokationName;
   }
 
-  const assetPath = await resolver.resolveAsset(`${componentDefinedName}.js`);
+  const assetPath = await resolver.resolve(`${componentDefinedName}.js`);
   await import(assetPath);
   return invokationName;
 }
 
 export default class Svg extends Component {
-  @service svgJar;
+  @service assetMap;
 
   constructor() {
     super(...arguments);

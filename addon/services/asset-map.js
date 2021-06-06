@@ -1,9 +1,9 @@
 import Service from '@ember/service';
 import { getOwner } from '@ember/application';
 
-export default class SvgJarService extends Service {
+export default class AssetMapService extends Service {
   // eslint-disable-next-line
-  resolveAsset(path) {
+  resolve(path) {
     const { rootURL = '' } = getOwner(this).resolveRegistration('config:environment');
     return `${rootURL}${path}`;
   }
